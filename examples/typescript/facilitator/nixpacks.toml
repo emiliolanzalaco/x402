@@ -4,5 +4,8 @@ nixPkgs = ["nodejs_20", "pnpm"]
 [phases.install]
 cmds = ["pnpm install"]
 
+[phases.build]
+cmds = ["cd node_modules/x402 && pnpm install && pnpm build"]
+
 [start]
 cmd = "pnpm start"
