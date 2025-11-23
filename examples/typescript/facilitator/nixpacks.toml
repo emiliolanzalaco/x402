@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["nodejs_20", "pnpm"]
+
+[phases.install]
+cmds = ["cd ../../../typescript && pnpm install && pnpm build && cd ../examples/typescript/facilitator && pnpm install"]
+
+[start]
+cmd = "pnpm start"
