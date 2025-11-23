@@ -5,7 +5,7 @@ nixPkgs = ["nodejs_20", "pnpm"]
 cmds = ["pnpm install"]
 
 [phases.build]
-cmds = ["cd node_modules/x402 && pnpm install && pnpm build"]
+cmds = ["pnpm add -D tsup typescript", "cd node_modules/x402 && npx tsup"]
 
 [start]
 cmd = "pnpm start"
